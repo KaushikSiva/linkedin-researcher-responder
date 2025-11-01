@@ -31,8 +31,5 @@ Using the extension
 Notes & next steps
 ------------------
 
-- Outreach detection leans on Gemini Writer when available and falls back to keyword heuristics; the overlay calls out which path was used.
-- The two response options live in the `STANDARD_REPLIES` constant inside `extension/background.js`—tweak that array to change the canned messages or phone number.
-- Proofreading still runs when Chrome exposes the Proofreader API; otherwise replies are returned verbatim.
-- For production use, add proper telemetry, settings UI, and stricter feature detection for different LinkedIn messaging surfaces.
-- If the option fires but no reply appears, click the recruiter’s message once so it’s in view, then right-click in the composer again.
+- Do more research about the company or role
+- Allow to write templates which can be customized
