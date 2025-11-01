@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "AutoReply Recruiter – Gemini Nano Edition",
+  "description": "Generate context-aware replies to recruiter outreach directly on LinkedIn using on-device Chrome AI APIs.",
+  "version": "0.1.0",
+  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://*.linkedin.com/*",
+    "https://www.levels.fyi/*",
+    "https://*.glassdoor.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "minimum_chrome_version": "127",
+  "action": {
+    "default_title": "AutoReply Recruiter"
+  }
+}
